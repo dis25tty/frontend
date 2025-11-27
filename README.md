@@ -45,6 +45,6 @@ Then open the provided localhost URL (typically `http://localhost:5173`).
 - Loading, error, and empty states are included; clicking a card opens the details panel.
 
 ## Screenshots
-![Dashboard](frontend-ui-images/dashboard.png)
+![Dashboard]([frontend-ui-images/dashboard.png](https://github.com/dis25tty/frontend/blob/main/frontend-ui-images/Screenshot%202025-11-27%20at%209.50.31%E2%80%AFPM.png))
 ![Device Cards](frontend-ui-images/cards-light.png)
 ![Details Panel](frontend-ui-images/details.png)
