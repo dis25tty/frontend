@@ -13,7 +13,9 @@ npm install
 ```
 
 2) Environment
-- `.env` is already included with `VITE_API_BASE_URL=http://localhost:5000`. Adjust if your backend differs.
+- `.env` is already included with:
+  - `VITE_API_BASE_URL=http://localhost:5000`
+  - `VITE_API_KEY=emoenergy123`
 
 ## Development
 Run the dev server:
@@ -22,15 +24,6 @@ npm run dev
 ```
 Then open the provided localhost URL (typically `http://localhost:5173`).
 
-## Build
-Create a production build:
-```bash
-npm run build
-```
-Preview the build locally:
-```bash
-npm run preview
-```
 
 ## Project Structure
 - `src/App.jsx` – Layout shell

@@ -3,14 +3,14 @@ import DevicesPage from './pages/DevicesPage';
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
-      <header className="sticky top-0 z-10 border-b border-emerald-500/20 bg-slate-950/80 backdrop-blur">
+    <div className="min-h-screen text-slate-100">
+      <header className="sticky top-0 z-10 border-b border-lime-400/20 bg-slate-950/70 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-emerald-300/80">EMO-ENERGY</p>
-            <h1 className="text-2xl font-semibold">EV Device Monitoring Dashboard</h1>
+            <p className="text-xs uppercase tracking-[0.2em] text-lime-300/90">EMO-ENERGY</p>
+            <h1 className="text-2xl font-semibold text-white">EV Device Monitoring Dashboard</h1>
           </div>
-          <div className="hidden text-sm text-emerald-200 sm:block">
+          <div className="hidden text-sm text-lime-200 sm:block">
             Monitoring health of connected EV devices
           </div>
         </div>

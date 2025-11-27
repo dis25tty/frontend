@@ -3,12 +3,12 @@ import React from 'react';
 const statusStyles = {
   active: {
     label: 'Active',
-    classes: 'border-emerald-400/50 bg-emerald-400/15 text-emerald-200 shadow-[0_0_12px_rgba(16,185,129,0.35)]',
-    dot: 'bg-emerald-400',
+    classes: 'border-lime-300/60 bg-lime-300/15 text-lime-100 shadow-[0_0_12px_rgba(190,242,100,0.35)]',
+    dot: 'bg-lime-300',
   },
   warning: {
     label: 'Warning',
-    classes: 'border-amber-400/50 bg-amber-400/15 text-amber-200 shadow-[0_0_12px_rgba(251,191,36,0.35)]',
+    classes: 'border-amber-400/50 bg-amber-400/15 text-amber-100 shadow-[0_0_12px_rgba(251,191,36,0.35)]',
     dot: 'bg-amber-300',
   },
   offline: {

@@ -3,6 +3,7 @@ import DeviceCard from '../components/DeviceCard';
 import DeviceDetailsPanel from '../components/DeviceDetailsPanel';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 const statusOptions = [
   { label: 'All', value: '' },
@@ -46,7 +47,10 @@ const DevicesPage = () => {
 
       try {
         const response = await fetch(fetchUrl, {
-          headers: { accept: 'application/json' },
+          headers: {
+            accept: 'application/json',
+            ...(API_KEY ? { 'x-api-key': API_KEY } : {}),
+          },
         });
 
         if (!response.ok) {
@@ -97,7 +101,10 @@ const DevicesPage = () => {
       try {
         const base = API_BASE_URL.replace(/\/$/, '');
         const response = await fetch(`${base}/health`, {
-          headers: { accept: 'application/json' },
+          headers: {
+            accept: 'application/json',
+            ...(API_KEY ? { 'x-api-key': API_KEY } : {}),
+          },
         });
         if (!response.ok) {
           throw new Error(`Health check failed (${response.status})`);
@@ -143,16 +150,16 @@ const DevicesPage = () => {
 
   return (
     <section className="space-y-6">
-      <div className="overflow-hidden rounded-2xl border border-emerald-500/20 bg-gradient-to-r from-slate-900/80 via-slate-900/60 to-slate-900/80 px-4 py-5 shadow-xl shadow-emerald-500/5">
+      <div className="overflow-hidden rounded-2xl border border-slate-800/70 bg-slate-950/60 px-4 py-5 shadow-xl shadow-black/30 backdrop-blur-sm">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
-            <p className="text-xs uppercase tracking-[0.18em] text-emerald-300/80">Backend</p>
+            <p className="text-xs uppercase tracking-[0.18em] text-lime-300/80">Backend</p>
             <p className="mt-1 break-all text-sm text-slate-200">{API_BASE_URL || 'Not configured'}</p>
           </div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-100 shadow-[0_0_0_6px_rgba(16,185,129,0.05)]">
+          <div className="inline-flex items-center gap-2 rounded-full border border-lime-300/30 bg-slate-900/80 px-3 py-1 text-xs font-medium text-lime-100 shadow-[0_0_0_6px_rgba(190,242,100,0.04)]">
             <span
               className={`h-2 w-2 rounded-full ${
-                healthError ? 'bg-red-400' : healthStatus === 'ok' ? 'bg-emerald-400' : 'bg-amber-300'
+                healthError ? 'bg-red-400' : healthStatus === 'ok' ? 'bg-lime-300' : 'bg-amber-300'
               }`}
             />
             <span>{healthError ? 'Unreachable' : healthStatus === 'ok' ? 'Healthy' : 'Degraded'}</span>
@@ -163,10 +170,10 @@ const DevicesPage = () => {
         </p>
       </div>
 
-      <div className="flex flex-col items-start justify-between gap-4 rounded-xl border border-emerald-500/20 bg-slate-900/70 px-4 py-5 shadow-lg shadow-emerald-500/5 sm:flex-row sm:items-center">
+      <div className="flex flex-col items-start justify-between gap-4 rounded-xl border border-slate-800/70 bg-slate-950/60 px-4 py-5 shadow-lg shadow-black/25 backdrop-blur-sm sm:flex-row sm:items-center">
         <div>
           <h2 className="text-xl font-semibold text-white">Devices</h2>
-          <p className="text-sm text-emerald-100/80">Monitor device health, status, and vitals in real time.</p>
+          <p className="text-sm text-lime-100/80">Monitor device health, status, and vitals in real time.</p>
         </div>
         <div className="flex items-center gap-2">
           <label htmlFor="status" className="text-sm text-slate-400">Status</label>
@@ -174,7 +181,7 @@ const DevicesPage = () => {
             id="status"
             value={statusFilter}
             onChange={handleStatusChange}
-            className="rounded-lg border border-emerald-500/40 bg-slate-950 px-3 py-2 text-sm text-slate-100 shadow-sm shadow-emerald-500/10 focus:border-emerald-400 focus:outline-none"
+            className="rounded-lg border border-lime-300/40 bg-slate-950 px-3 py-2 text-sm text-slate-100 shadow-sm shadow-lime-300/10 focus:border-lime-300 focus:outline-none"
           >
             {statusOptions.map((option) => (
               <option key={option.value || 'all'} value={option.value}>
@@ -186,8 +193,8 @@ const DevicesPage = () => {
       </div>
 
       {loading && (
-        <div className="flex items-center gap-3 rounded-lg border border-emerald-500/30 bg-slate-900/70 px-4 py-3 text-sm text-slate-200 shadow-md shadow-emerald-500/5">
-          <span className="inline-flex h-8 w-8 animate-spin rounded-full border-2 border-emerald-500/30 border-b-transparent" aria-hidden="true" />
+        <div className="flex items-center gap-3 rounded-lg border border-lime-300/30 bg-slate-900/70 px-4 py-3 text-sm text-slate-200 shadow-md shadow-lime-300/10">
+          <span className="inline-flex h-8 w-8 animate-spin rounded-full border-2 border-lime-300/30 border-b-transparent" aria-hidden="true" />
           <span>Loading devices…</span>
         </div>
       )}

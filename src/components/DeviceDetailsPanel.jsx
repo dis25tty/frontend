@@ -13,8 +13,8 @@ const DeviceDetailsPanel = ({ device, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-30 flex items-stretch justify-end bg-black/50 backdrop-blur">
-      <div className="flex h-full w-full max-w-md flex-col border-l border-emerald-500/20 bg-slate-950 shadow-2xl shadow-emerald-500/10">
-        <header className="flex items-start justify-between border-b border-emerald-500/20 px-5 py-4">
+      <div className="flex h-full w-full max-w-md flex-col border-l border-lime-300/25 bg-slate-950 shadow-2xl shadow-lime-300/10">
+        <header className="flex items-start justify-between border-b border-lime-300/25 px-5 py-4">
           <div>
             <p className="text-xs uppercase tracking-[0.18em] text-emerald-300/80">Device Details</p>
             <h3 className="text-lg font-semibold text-white">{device.name}</h3>
@@ -23,7 +23,7 @@ const DeviceDetailsPanel = ({ device, onClose }) => {
           <button
             type="button"
             onClick={onClose}
-            className="rounded-full border border-emerald-500/30 bg-slate-900 p-2 text-emerald-200 transition hover:border-emerald-400 hover:text-white"
+            className="rounded-full border border-lime-300/40 bg-slate-900 p-2 text-lime-100 transition hover:border-lime-200 hover:text-white"
             aria-label="Close details"
           >
             ×
@@ -37,7 +37,7 @@ const DeviceDetailsPanel = ({ device, onClose }) => {
             {detailItems.map((item) => (
               <div
                 key={item.label}
-                className="rounded-lg border border-emerald-500/20 bg-slate-900/70 px-3 py-2 shadow-inner shadow-emerald-500/5"
+                className="rounded-lg border border-lime-300/25 bg-slate-900/70 px-3 py-2 shadow-inner shadow-lime-300/10"
               >
                 <div className="text-[10px] uppercase tracking-wide text-slate-500">{item.label}</div>
                 <div className={`${item.monospace ? 'font-mono' : 'font-medium'} text-sm text-white`}>
