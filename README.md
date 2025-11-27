@@ -46,5 +46,4 @@ Then open the provided localhost URL (typically `http://localhost:5173`).
 
 ## Screenshots
 ![Dashboard](https://github.com/dis25tty/frontend/blob/main/frontend-ui-images/Screenshot%202025-11-27%20at%209.50.31%E2%80%AFPM.png)
-![Device Cards](frontend-ui-images/cards-light.png)
-![Details Panel](frontend-ui-images/details.png)
+![Details Panel](https://github.com/dis25tty/frontend/blob/main/frontend-ui-images/Screenshot%202025-11-27%20at%209.50.58%E2%80%AFPM.png)
