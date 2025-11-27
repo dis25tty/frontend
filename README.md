@@ -2,7 +2,7 @@
 
 A Vite + React + Tailwind dashboard for monitoring EV devices. It fetches data from the backend (default `http://localhost:5000`) and shows status, metrics, and details in a modern UI.
 
-##Visuals
+## Visuals
 
 ## Prerequisites
 - Node.js 18+
