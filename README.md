@@ -41,3 +41,8 @@ Then open the provided localhost URL (typically `http://localhost:5173`).
 ## Notes
 - Uses `VITE_API_BASE_URL` at build/runtime; ensure the backend allows CORS for the frontend origin.
 - Loading, error, and empty states are included; clicking a card opens the details panel.
+
+## Screenshots
+![Dashboard](frontend-ui-images/dashboard.png)
+![Device Cards](frontend-ui-images/cards-light.png)
+![Details Panel](frontend-ui-images/details.png)
