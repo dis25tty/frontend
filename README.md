@@ -2,6 +2,8 @@
 
 A Vite + React + Tailwind dashboard for monitoring EV devices. It fetches data from the backend (default `http://localhost:5000`) and shows status, metrics, and details in a modern UI.
 
+##Visuals
+
 ## Prerequisites
 - Node.js 18+
 - Backend API running at `http://localhost:5000` (or your custom `VITE_API_BASE_URL`)
